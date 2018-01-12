@@ -14,14 +14,15 @@ defmodule Issues.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :httpoison]
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 0.9"}
+      {:httpoison, "~> 0.9"},
+      {:poison, "~> 2.2"}
     ]
   end
 end
